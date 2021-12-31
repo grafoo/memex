@@ -7,7 +7,11 @@ defmodule Memex.MixProject do
       version: "0.1.0",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      description: description(),
+      package: package(),
+      deps: deps(),
+      name: "Memex",
+      source_url: "https://github.com/grafoo/memex"
     ]
   end
 
@@ -21,9 +25,17 @@ defmodule Memex.MixProject do
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
+    [{:ex_doc, ">= 0.0.0", only: :dev, runtime: false}]
+  end
+
+  defp description() do
+    "Expand your memory."
+  end
+
+  defp package() do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      licenses: ["Apache-2.0"],
+      links: %{"GitHub" => "https://github.com/grafoo/memex"}
     ]
   end
 end
