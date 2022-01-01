@@ -24,7 +24,7 @@ defmodule Soundcloud.Stream do
   def id(username) do
     {:ok, res} = fetch(username)
 
-    Floki.parse_document!(res.body)
+    Floki.parse(res.body)
     |> Floki.find("head > meta[property=\"al:ios:url\"")
     |> hd
     |> Floki.attribute("content")

@@ -4,7 +4,7 @@ defmodule Memex.MixProject do
   def project do
     [
       app: :memex,
-      version: "0.1.0",
+      version: "0.2.0",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       description: description(),
@@ -30,7 +30,7 @@ defmodule Memex.MixProject do
       {:feedraptor, "~> 0.3.0"},
       {:tesla, "~> 1.4"},
       {:hackney, "~> 1.18"},
-      {:floki, "~> 0.32.0", override: true},
+      {:floki, "~> 0.19.0"},
       {:ecto_sql, "~> 3.7"},
       {:postgrex, ">= 0.0.0"}
     ]

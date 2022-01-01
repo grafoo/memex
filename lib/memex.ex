@@ -16,7 +16,7 @@ defmodule Memex do
       iex> Memex.slurp("https://soundcloud.com/podcast")
       %Podcast{
         __meta__: #Ecto.Schema.Metadata<:loaded, "podcasts">,
-	...
+        ...
       }
 
   """
