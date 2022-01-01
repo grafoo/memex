@@ -25,7 +25,15 @@ defmodule Memex.MixProject do
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
-    [{:ex_doc, ">= 0.0.0", only: :dev, runtime: false}]
+    [
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+      {:feedraptor, "~> 0.3.0"},
+      {:tesla, "~> 1.4"},
+      {:hackney, "~> 1.18"},
+      {:floki, "~> 0.32.0", override: true},
+      {:ecto_sql, "~> 3.7"},
+      {:postgrex, ">= 0.0.0"}
+    ]
   end
 
   defp description() do
